@@ -3,31 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14151E">
 <meta name="description" content="공나영 · 콘텐츠로 사람과 정보를 잇는 온라인 명함">
 <meta property="og:title" content="공나영 명함">
 <meta property="og:description" content="콘텐츠로 사람과 정보를 잇는 공나영입니다.">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>공나영 명함</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Jost:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap">
 <style id="page-style">
 /* Layout: one phone-width column; overlapping-circle motif in the hero, activities grouped into category panels with dated rows */
 :root{
-  --bg:#F3F4FA; --surface:#FFFFFF; --fg:#22243A; --muted:#6A6D88; --line:#E1E2EE;
-  --accent:#7F7FE8; --accent-soft:#E7E7FC; --pink:#E98DB6; --pink-soft:#FBE6EF;
-  --chip:#DFDFFB; --chip-fg:#4E4EBF; --chip-pink:#FBE0EC; --chip-pink-fg:#B4467A;
+  /* deliberately dark-only design */
+  color-scheme:dark;
+  --bg:#14151E; --surface:#1D1F2D; --fg:#ECEDF7; --muted:#A2A5C0; --line:#2C2E42;
+  --accent:#A6A6FF; --accent-soft:#2A2B48; --pink:#F2A9C8; --pink-soft:#3A2632;
+  --chip:#2D2E52; --chip-fg:#C6C6FF; --chip-pink:#42283A; --chip-pink-fg:#F6BCD5;
   --f-ko:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --f-en:"Jost","Futura","Avenir Next",system-ui,sans-serif;
   --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#14151E; --surface:#1D1F2D; --fg:#ECEDF7; --muted:#A2A5C0; --line:#2C2E42;
-  --accent:#A6A6FF; --accent-soft:#2A2B48; --pink:#F2A9C8; --pink-soft:#3A2632;
-  --chip:#2D2E52; --chip-fg:#C6C6FF; --chip-pink:#42283A; --chip-pink-fg:#F6BCD5; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#14151E; --surface:#1D1F2D; --fg:#ECEDF7; --muted:#A2A5C0; --line:#2C2E42;
-  --accent:#A6A6FF; --accent-soft:#2A2B48; --pink:#F2A9C8; --pink-soft:#3A2632;
-  --chip:#2D2E52; --chip-fg:#C6C6FF; --chip-pink:#42283A; --chip-pink-fg:#F6BCD5; color-scheme:dark}
 
 body{background:var(--bg);color:var(--fg);font-family:var(--f-ko);line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 40px}
