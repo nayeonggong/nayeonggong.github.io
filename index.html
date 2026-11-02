@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="공나영 · 콘텐츠로 사람과 정보를 잇는 온라인 명함">
+<meta property="og:title" content="공나영 명함">
+<meta property="og:description" content="콘텐츠로 사람과 정보를 잇는 공나영입니다.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>공나영 명함</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Jost:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap">
+<style id="page-style">
+/* Layout: one phone-width column; overlapping-circle motif in the hero, activities grouped into category panels with dated rows */
+:root{
+  --bg:#F3F4FA; --surface:#FFFFFF; --fg:#22243A; --muted:#6A6D88; --line:#E1E2EE;
+  --accent:#7F7FE8; --accent-soft:#E7E7FC; --pink:#E98DB6; --pink-soft:#FBE6EF;
+  --chip:#DFDFFB; --chip-fg:#4E4EBF; --chip-pink:#FBE0EC; --chip-pink-fg:#B4467A;
+  --f-ko:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-en:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14151E; --surface:#1D1F2D; --fg:#ECEDF7; --muted:#A2A5C0; --line:#2C2E42;
+  --accent:#A6A6FF; --accent-soft:#2A2B48; --pink:#F2A9C8; --pink-soft:#3A2632;
+  --chip:#2D2E52; --chip-fg:#C6C6FF; --chip-pink:#42283A; --chip-pink-fg:#F6BCD5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14151E; --surface:#1D1F2D; --fg:#ECEDF7; --muted:#A2A5C0; --line:#2C2E42;
+  --accent:#A6A6FF; --accent-soft:#2A2B48; --pink:#F2A9C8; --pink-soft:#3A2632;
+  --chip:#2D2E52; --chip-fg:#C6C6FF; --chip-pink:#42283A; --chip-pink-fg:#F6BCD5; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ko);line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 40px}
+.wrap{max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.label{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-en);font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--chip-fg);background:var(--chip);padding:7px 14px 7px 12px;border-radius:999px;margin:0 0 18px}
+.label::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.8}
+.label.p{background:var(--chip-pink);color:var(--chip-pink-fg)}
+
+.hero{position:relative;overflow:hidden;padding-top:30px}
+.motif{position:absolute;right:-36px;top:-44px;width:200px;height:180px;pointer-events:none}
+.motif i{position:absolute;display:block}
+.motif .a{width:132px;height:132px;right:52px;top:18px;border-radius:50%;background:var(--accent-soft)}
+.motif .b{width:108px;height:108px;right:0;top:62px;border-radius:50%;background:var(--pink-soft);opacity:.92}
+.motif .s{width:22px;height:22px;right:124px;top:126px;background:var(--accent);
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.motif .t{width:12px;height:12px;right:30px;top:40px;background:var(--pink);
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+h1{position:relative;margin:0;font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.en{position:relative;font-family:var(--f-en);font-weight:400;font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);margin:12px 0 0}
+.intro{position:relative;margin:20px 0 0;font-size:clamp(12px,3.4vw,15px);line-height:1.75}
+.intro span{display:block;white-space:nowrap}
+@media (max-width:379px){.intro span{display:inline;white-space:normal}}
+.intro{word-break:keep-all}
+.intro b{white-space:nowrap;font-weight:700;background:linear-gradient(transparent 62%,var(--pink-soft) 62%)}
+
+.contact{position:relative;display:flex;flex-direction:column;gap:8px;margin-top:22px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;
+  color:var(--fg);text-decoration:none;background:var(--surface)}
+.row .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;width:44px;flex:none}
+.row .v{flex:1;min-width:0;font-size:15px;font-weight:600;user-select:all;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.copy{flex:none;font:500 12px var(--f-mono);color:var(--accent);background:var(--accent-soft);border:0;border-radius:999px;padding:6px 11px;cursor:pointer}
+.copy:focus-visible:focus-visible,a.row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a.row:hover{border-color:var(--accent)}
+a.row .go{font:500 12px var(--f-mono);color:var(--accent)}
+
+.items{display:flex;flex-direction:column;gap:16px;margin:0;padding:0;list-style:none}
+.item{display:grid;gap:3px;min-width:0}
+.item .top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 10px}
+.item h3{margin:0;font-size:15px;font-weight:700;line-height:1.4}
+.item time{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.item p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.55}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;color:var(--fg);background:var(--pink-soft);padding:2px 8px;border-radius:6px;margin-top:4px;justify-self:start}
+.aside{font-weight:400;font-size:13px;color:var(--muted);margin-left:4px}
+.items > .item > .top h3::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--chip-fg);margin-right:9px;vertical-align:.12em}
+.pk .items > .item > .top h3::before{background:var(--chip-pink-fg)}
+.sub{border-left:2px solid var(--accent-soft);padding-left:12px;display:flex;flex-direction:column;gap:10px}
+
+.follow{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:6px}
+.follow b{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.follow span{font-size:13px;color:var(--muted)}
+
+footer{text-align:center;font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.08em;padding-top:6px}
+@media (max-width:360px){h1{font-size:36px}}
+</style>
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script id="card-script">
+(function(){
+  document.getElementById('app').innerHTML =
+  '<section class="panel hero"><div class="motif" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="s"></i><i class="t"></i></div>'+
+    '<h1>공나영</h1><p class="en">Nayeong Gong</p>'+
+    '<p class="intro"><span>콘텐츠로 사람과 정보를 잇는 공나영입니다.</span> <span>학생회, 또래상담 프로그램, 반도체 소부장</span> <span>서포터즈 활동을 통해 <b>행사 기획</b>과 <b>홍보 콘텐츠 제작</b></span> <span>경험을 쌓아왔습니다.</span></p>'+
+    '<div class="contact">'+
+      '<div class="row"><span class="k">Tel</span><span class="v" id="tel">010-2274-9478</span><button class="copy" type="button" data-copy="tel">복사</button></div>'+
+      '<div class="row"><span class="k">Mail</span><span class="v" id="mail">saecomzip@gmail.com</span><button class="copy" type="button" data-copy="mail">복사</button></div>'+
+      '<a class="row" href="https://www.instagram.com/saecom.zip/" target="_blank" rel="noopener"><span class="k">Insta</span><span class="v">@saecom.zip</span><span class="go">열기 ↗</span></a>'+
+    '</div></section>'+
+
+  '<section class="panel"><p class="label">Content</p><ul class="items">'+
+    '<li class="item"><div class="top"><h3>saecom.zip 인스타 매거진 운영</h3></div>'+
+      '<div class="follow"><b>2,635</b><span>팔로워</span></div></li>'+
+    '<li class="item"><div class="top"><h3>COSS 반도체 소부장 서포터즈</h3><time>2026 – 진행중</time></div>'+
+      '<p>반도체 소부장을 학교에 알리는 카드뉴스(캐러셀)·릴스 제작, 관련 행사 기획·진행. PB그라운드에서 팀 리더로 참가자 유치 홍보 콘텐츠 제작</p>'+
+      '<span class="badge">PB그라운드 홍보 콘텐츠 부문 장려상 (3등)</span></li>'+
+    '<li class="item"><div class="top"><h3>학교 공식 브이로그 제작·출연</h3><time>24년 2학기</time></div>'+
+      '<p>교내 홍보 TF팀과 협업해 학교 공식 인스타 릴스·유튜브 영상 업로드 (조회수 총합 약 2.1만)</p></li>'+
+    '<li class="item"><div class="top"><h3>TEDx KOREATECH 12기</h3><time>24.09 – 24.12</time></div>'+
+      '<p>기획팀·홍보팀 겸임. 동아리 행사·강연 기획, 홍보 콘텐츠와 릴스 제작</p></li>'+
+    '<li class="item"><div class="top"><h3>서포터즈 · 홍보 프로젝트</h3></div>'+
+      '<p>ALC 2026 조선일보 서포터즈 (행사 소개 게시물 제작) · 대학생협 콩세알 프로젝트 (24.09 – 24.11, 상품 홍보 게시물 업로드)</p></li>'+
+  '</ul></section>'+
+
+  '<section class="panel pk"><p class="label p">Global</p><ul class="items">'+
+    '<li class="item"><div class="top"><h3>미국 반도체 단기 교환 프로그램</h3><time>26.06.27 – 26.07.18</time></div>'+
+      '<p>UC Irvine(UCI) Calit2 · 반도체 공정·첨단 패키징 교육, 기업 특강과 시설 견학</p></li>'+
+    '<li class="item"><div class="top"><h3>캐나다 워털루 대학교 어학연수</h3><time>26.01 – 26.02</time></div></li>'+
+  '</ul></section>'+
+
+  '<section class="panel"><p class="label">Student Council</p><ul class="items">'+
+    '<li class="item"><div class="top"><h3>총학생회 국원</h3><time>24.12 – 25.11</time></div>'+
+      '<p>새내기 전체 OT 준비(컨텐츠팀), 축제·체육대회 무대팀 PPT와 홍보 카드뉴스 제작, 학교 행사 기획·진행, 불법 카메라·금연 구역 점검</p></li>'+
+    '<li class="item"><div class="top"><h3>과학생회 회계국원</h3><time>24.03 – 24.11</time></div><p>학생회비 관리 보조, PPT 제작</p></li>'+
+  '</ul></section>'+
+
+  '<section class="panel pk"><p class="label p">Peer Counseling</p><ul class="items">'+
+    '<li class="item"><div class="top"><h3>디딤지기 <span class="aside">교내 또래 상담 프로그램</span></h3><time>24.08 – 현재</time></div><div class="sub">'+
+      '<div class="item"><div class="top"><h3>26년 2학기 부회장</h3><time>26.08 –</time></div></div>'+
+      '<div class="item"><div class="top"><h3>26기 홍보팀</h3><time>26.02 – 26.07</time></div><p>릴스·포스터·카드뉴스 제작, 행사 기획, 또래 상담</p></div>'+
+      '<div class="item"><div class="top"><h3>23기 회계팀</h3><time>24.08 – 24.12</time></div><p>비용 관리·보고서 작성, 관생 대상 프로그램 제작과 상담</p></div>'+
+    '</div></li>'+
+  '</ul></section>'+
+
+  '<section class="panel"><p class="label">Mentoring · Awards</p><ul class="items">'+
+    '<li class="item"><div class="top"><h3>다문화·탈북 청소년 멘토링</h3><time>26.03 – 진행중</time></div><p>수업 진행, 아이들과의 관계 유지</p></li>'+
+    '<li class="item"><div class="top"><h3>새내기 멘토링</h3><time>25.03 – 25.07</time></div><p>수업 진행·보조, 새내기 Q&amp;A와 행사 기획·진행</p></li>'+
+    '<li class="item"><div class="top"><h3>Pen 학생평가단 14기</h3></div><span class="badge">우수활동자 선정</span></li>'+
+  '</ul></section>'+
+  '<footer>NAYEONG GONG · 2026</footer>';
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.dataset.copy);
+      function flash(t){ btn.textContent=t; setTimeout(function(){ btn.textContent='복사'; },1400); }
+      function fallback(){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); flash('선택됨'); }
+      try { navigator.clipboard.writeText(el.textContent.trim()).then(function(){ flash('복사됨'); }, fallback); } catch(e) { fallback(); }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
